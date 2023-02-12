@@ -34,7 +34,7 @@ export default function Posts() {
     ]
 
     return (
-        <div className="posts">
+        <div className="posts" data-test="post">
             {listadeposts.map((p) => {return(
                 <Post
                     username={p.username}
@@ -45,7 +45,7 @@ export default function Posts() {
                     likes={p.likes}
                     curtido={p.curtido}
                     salvo={p.salvo}
-                    data-test="post"
+                    
                 />
             )})}
         </div>
