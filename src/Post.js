@@ -62,25 +62,25 @@ function Post(props) {
             </div>
 
             <div className="conteudo" onClick={likenaimagem}>
-                <img src={imagempost} />
+                <img src={imagempost} data-test="post-image" />
             </div>
 
             <div className="fundo">
                 <div className="acoes">
                     <div>
                         {recebeuLike ? (
-                            <ion-icon onClick={darlike} className="liked" name="heart"></ion-icon>
+                            <ion-icon onClick={darlike} data-test="like-post" className="liked" name="heart"></ion-icon>
                         ) : (
-                            <ion-icon onClick={darlike} name="heart-outline"></ion-icon>
+                            <ion-icon onClick={darlike} data-test="like-post" name="heart-outline"></ion-icon>
                         )}
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
                         {foiSalvo ? (
-                            <ion-icon onClick={salvar} name="bookmark"></ion-icon>
+                            <ion-icon onClick={salvar} data-test="save-post" name="bookmark"></ion-icon>
                         ) : (
-                            <ion-icon onClick={salvar} name="bookmark-outline"></ion-icon>
+                            <ion-icon onClick={salvar} data-test="save post" name="bookmark-outline"></ion-icon>
                         )}
                     </div>
                 </div>
@@ -88,7 +88,7 @@ function Post(props) {
                 <div className="curtidas">
                     <img src={curtidoporpfp} />
                     <div className="texto">
-                        Curtido por <strong>{curtidoporquem}</strong> e <strong>outras {contador} pessoas</strong>
+                        Curtido por <strong>{curtidoporquem}</strong> e <strong data-test="likes-number">outras {contador} pessoas</strong>
                     </div>
                 </div>
             </div>

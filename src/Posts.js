@@ -22,7 +22,15 @@ export default function Posts() {
             likes: 200541,
             curtido: true,
             salvo: true
-        }
+        },
+        {username: "barked",
+            pfp: "images/barked.svg",
+            imagempost: "images/dog.svg",
+            curtidoporpfp: "images/adorable_animals.svg",
+            curtidoporquem: "adorable_animals",
+            likes: 200541,
+            curtido: true,
+            salvo: false}
     ]
 
     return (
@@ -37,6 +45,7 @@ export default function Posts() {
                     likes={p.likes}
                     curtido={p.curtido}
                     salvo={p.salvo}
+                    data-test="post"
                 />
             )})}
         </div>
